@@ -10,7 +10,7 @@ const App = () => {
   const [percentage, setPercentage] = useState(0);
   const [percentageClass, setPercentageClass] = useState('');
   const [change, setChange] = useState(false);
-  const [gancho, setGancho] = useState(150500);
+  const gancho = 150500;
   const [showDisclaimer, setShowDisclaimer] = useState(false);
 
   const handleShowDisclaimer = () => {
@@ -45,7 +45,6 @@ const App = () => {
           alert('No compatible wallet was detected. Make sure you have one of the following wallets installed: MetaMask, Binance Wallet, Trust Wallet, Coinbase Wallet.')
         }
         if (isConnected) {
-          const accounts = web3.eth.getAccounts();
           let web3Instance = web3;
           const contractAddress = '0x3b2aF9C1749E7F6375BdAFFEa22e2E2973c19ffE';
           const contractABI = require('../src/contracts/SmartSocialHelp_1/abi.json');
@@ -74,7 +73,7 @@ const App = () => {
       <section id="stats">
         <div className="row narrow section-intro ">
           <div className="col-twelve">
-            <h1 className="animate-this fadeInUp animated">The Millon Dollar Future Information</h1>
+            <h1 className="animate-this fadeInUp animated">The Millon Dollar Future Box</h1>
           </div>
         </div>
         <div className="row narrow section-intro ">
@@ -103,7 +102,7 @@ const App = () => {
       <footer>
         <div className="col-twelve tab-full">
           <div className="copyright">
-            <a style={{ cursor: "pointer" }} onClick={handleShowDisclaimer}>disclaimer</a>
+            <a style={{ cursor: "pointer" }} onClick={handleShowDisclaimer} href="#">disclaimer</a>
             {
               showDisclaimer && (
                 <div className="popup">

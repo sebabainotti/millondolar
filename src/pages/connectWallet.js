@@ -1,6 +1,5 @@
 import React, { useState } from 'react';
 import Web3 from 'web3';
-import BigNumber from "bignumber.js";
 
 const ConnectWalletPage = ({ updateTotals }) => {
     const [web3, setWeb3] = useState(null);
