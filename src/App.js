@@ -63,7 +63,7 @@ const App = () => {
         }
         return 0;
       } catch (error) {
-        console.error('Error:', error);
+        console.log(error);
       }
     }
     getTotalInvested();
