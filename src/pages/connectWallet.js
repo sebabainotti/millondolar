@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import Web3 from 'web3';
+import BigNumber from "bignumber.js";
 
 const ConnectWalletPage = ({ updateTotals }) => {
     const [web3, setWeb3] = useState(null);
@@ -19,12 +20,12 @@ const ConnectWalletPage = ({ updateTotals }) => {
             }
             let contractInstance = connectToSepolia(web3Instance);
             let valueEthInUsd = parseInt(await contractInstance.methods.getConversionRate(1).call());
-            const amountETH = inputValue / valueEthInUsd;
-            const weiAmount = web3Instance.utils.toWei(amountETH.toString(), 'ether');
+            const amountETH = new BigNumber(inputValue / valueEthInUsd);
+            let weiAmount = (amountETH.multipliedBy(new BigNumber(1000000000000000000)));
             const accounts = await web3Instance.eth.getAccounts();
             var result = await contractInstance.methods.fund().send({
                 from: accounts[0],
-                value: weiAmount,
+                value: parseInt(weiAmount),
             }).then(transactionHash => {
                 console.log('Transacción enviada. Hash:', transactionHash);
                 // Esperar a que la transacción se confirme
@@ -90,7 +91,7 @@ const ConnectWalletPage = ({ updateTotals }) => {
             if (isConnected) {
                 const accounts = web3.eth.getAccounts();
                 accounts.then(function (res) {
-                    setWalletValue(res);
+                    setWalletValue(res[0]);
                 })
                 setWeb3(web3);
             }
