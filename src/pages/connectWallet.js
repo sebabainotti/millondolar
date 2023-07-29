@@ -62,7 +62,7 @@ const ConnectWalletPage = ({ updateTotals }) => {
 
     const connectToSepolia = (web3Instance) => {
         try {
-            const contractAddress = '0xd25E9cD66c382f9dc88790CF46AB9B8BcfaC3d13';
+            const contractAddress = '0xf865853847a571c12a8e956c9f2ce28e2487a563';
             const contractABI = require('../../src/contracts/SmartSocialHelp_1/abi.json');
             const contractInstance = new web3Instance.eth.Contract(contractABI, contractAddress);
             return contractInstance;
