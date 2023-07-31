@@ -10,7 +10,7 @@ const App = () => {
   const [percentage, setPercentage] = useState(0);
   const [percentageClass, setPercentageClass] = useState('');
   const [change, setChange] = useState(false);
-  const gancho = 155576;
+  const gancho = 0;
   const [showDisclaimer, setShowDisclaimer] = useState(false);
 
   const handleShowDisclaimer = () => {
