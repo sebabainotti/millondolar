@@ -1216,16 +1216,84 @@ input::-moz-focus-inner {
 	content: "";
 }
 
+.skill-bars li .percent0 {
+	width: 0%;
+}
+
+.skill-bars li .percent1 {
+	width: 1%;
+}
+
+.skill-bars li .percent2 {
+	width: 2%;
+}
+
+.skill-bars li .percent3 {
+	width: 3%;
+}
+
+.skill-bars li .percent4 {
+	width: 4%;
+}
+
 .skill-bars li .percent5 {
 	width: 5%;
+}
+
+.skill-bars li .percent6 {
+	width: 6%;
+}
+
+.skill-bars li .percent7 {
+	width: 7%;
+}
+
+.skill-bars li .percent8 {
+	width: 8%;
+}
+
+.skill-bars li .percent9 {
+	width: 9%;
 }
 
 .skill-bars li .percent10 {
 	width: 10%;
 }
 
+.skill-bars li .percent11 {
+	width: 11%;
+}
+
+.skill-bars li .percent12 {
+	width: 12%;
+}
+
+.skill-bars li .percent13 {
+	width: 13%;
+}
+
+.skill-bars li .percent14 {
+	width: 14%;
+}
+
 .skill-bars li .percent15 {
 	width: 15%;
+}
+
+.skill-bars li .percent16 {
+	width: 16%;
+}
+
+.skill-bars li .percent17 {
+	width: 17%;
+}
+
+.skill-bars li .percent18 {
+	width: 18%;
+}
+
+.skill-bars li .percent19 {
+	width: 19%;
 }
 
 .skill-bars li .percent20 {
