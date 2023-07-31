@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import ConnectWalletPage from './pages/connectWallet';
-import box from './images/yo.gif';
+import box from './images/yo.png';
 import Web3 from 'web3';
 import BigNumber from "bignumber.js";
 import Disclaimer from './pages/disclaimer';
@@ -73,23 +73,20 @@ const App = () => {
       <section id="stats">
         <div className="row narrow section-intro ">
           <div className="col-twelve">
-            <h1 className="animate-this fadeInUp animated">The Millon Dollar Future Box</h1>
+            <h1 className="animate-this fadeInUp animated">I want to be a millionaire without scamming people</h1>
           </div>
         </div>
         <div className="row narrow section-intro ">
           <div className="col-twelve">
             <img src={box} style={{ width: "30%", marginBottom: "40px" }} alt="box" />
           </div>
-          <p className="lead animate-this">Want to know what's inside the box? Invest to see.</p>
+          <p className="lead animate-this">You want to help me? Invest to reveal my identity.</p>
         </div>
         <div className="col-twelve col-bar tab-full">
-
-          <h3>Skill Bars</h3>
-
           <ul className="skill-bars">
             <li>
               <div className={percentageClass}><span>{percentage}%</span></div>
-              <p>Only missing {total} USD for the box to open</p>
+              <p>Only missing {total} dollars left for there to be one more millionaire in this world</p>
             </li>
           </ul>
         </div>
